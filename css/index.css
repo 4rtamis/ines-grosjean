@@ -1,0 +1,233 @@
+html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+	background-image: url("../res/img/background.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: contain;
+	background-color: #090909;
+	color: white;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+main > h1 {
+	font-size: 100px;
+	color: hsl(22, 55%, 75%);
+	text-align: center;
+}
+
+#gallery_picture_link {
+	text-decoration: none;
+	position: relative;
+}
+
+#main_img_container {
+	position: relative;
+	width: 618px;
+	height: 514px;
+	margin-top: 30px;
+	margin-bottom: 100px;
+}
+
+#main_img {
+	position: absolute;
+	top: 0px;
+	left: 130px;
+	background-image: url("../res/img/main_1.jpg");
+	background-repeat: no-repeat;
+	background-size: 442px;
+	background-position: center;
+	width: 442px;
+	height: 496px;
+	transition-duration: 0.4s;
+}
+
+#main_img:hover {
+	background-size: 460px;
+	cursor: pointer;
+}
+
+#main_img_mobile {
+	display: none;
+}
+
+#overlay {
+	display: none;
+}
+
+#background_div {
+	position: absolute;
+	top: 40px;
+	left: 0;
+	border: solid white 1px;
+	width: 618px;
+	height: 514px;
+	transition-duration: 0.4s;
+}
+
+#background_div:hover {
+	background-color: rgba(255,255,255,0.05);
+	cursor: pointer;
+}
+
+#background_div:hover +p {
+	opacity: 0.9;
+}
+
+#gallerie_link {
+	color: white;
+	opacity: 0;
+	position: absolute;
+	bottom: -50px;
+	right: 20px;
+	font-size: 24px;
+	transition-duration: 0.4s;
+}
+
+main section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 40px 20px 40px 20px;
+	box-sizing: border-box;
+	margin-bottom: 100px;
+}
+
+main section div {
+	width: 66%;
+}
+
+main section h2 {
+	font-size: 50px;
+	color: #D0875D;
+	margin-top: 0;
+}
+
+main section p {
+	font-size: 18px;
+	color: white;
+	opacity: 0.9;
+	font-weight: normal;
+	line-height: 1.4;
+	text-align: justify;
+}
+
+#parcours_section {
+	background-color: rgba(133, 106, 90, 0.5);
+	margin-top: 30px;
+}
+
+#secondary_image {
+	width: 70%;
+	height: auto;
+	background-image: url("../res/img/secondary.jpg");
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: solid 5px #E2B69C;
+	border-radius: 10px;
+	transition-duration: 1s;
+}
+
+#secondary_image:hover {
+	background-size: 106%;
+}
+
+#physique_section {
+	margin-top: 100px;
+	background-color: rgba(133, 106, 90, 0.5);
+}
+
+#physique_section p {
+	font-size: 22px;
+}
+
+strong {
+	font-weight: bold;
+}
+
+@media screen and (max-width: 780px) {
+	#secondary_image {
+		width: 90%;
+	}
+}
+
+
+@media screen and (max-width: 650px) {
+	#main_img_container {
+		display: none;
+	}
+
+	#gallery_picture_link {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#main_img_mobile {
+		display: inline;
+		width: 70%;
+	}
+
+	#overlay {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		width: 70.1%;
+		height: 0%;
+		overflow: hidden;
+		bottom: 0;
+		background-color: rgba(0,0,0,0.8);
+		margin: 0 auto 0 auto;
+	}
+
+	#gallery_picture_link:hover #overlay {
+		height: 100%;
+	}
+
+
+	#overlay p {
+		font-size: 30px;
+		text-decoration: none;
+		font-weight: normal;
+		color: white;
+	}
+
+	main section h2 {
+		text-align: center;
+		font-size: 35px; 
+	}
+
+	main section div {
+		padding: 0 20px 0 20px;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 440px) {
+	main > h1 {
+		font-size: 70px;
+	}
+}

@@ -1,0 +1,196 @@
+html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+	background-image: url("../res/img/background.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: contain;
+	background-color: #090909;
+	color: white;
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+}
+
+#button_container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 40px;
+	margin: 30px 0;
+	box-sizing: border-box;
+	background-color: #BC9262;
+	border: 3px white solid;
+	border-radius: 3px;
+	transition-duration: 0.4s;
+}
+
+#book_button {
+	width: 100%;
+	padding: 0;
+	margin: 0; 
+	text-align: center;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 20px;
+	color: white;
+}
+
+#button_container:hover {
+	background-color: #3C2E1F;
+}
+
+section  {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin: 50px 0;
+	padding: 0;
+}
+
+.gallery {
+	width: 40%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#lightgallery_1 > a > .portrait {
+	height: 230px;
+	width: 164px;
+}
+
+#lightgallery_1 > a > .landscape {
+	height: 227px;
+	width: 328px;
+}
+
+#lightgallery_2 > a > img {
+	height: 345.5px;
+	width: 220.3px;
+}
+
+.gallery > a {
+	position: relative;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.6) url('../res/loupe.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	transition-duration: 0.4s;
+	opacity: 0;
+}
+
+.gallery > a:hover .overlay {
+	opacity: 1;
+}
+
+*{box-sizing: border-box; -webkit-box-sizing: border-box; }
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 1655px) {
+
+	section {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.gallery {
+		width: 870px;
+		margin-bottom: 50px;
+	}
+
+}
+
+@media screen and (max-width: 880px) {
+
+	.gallery {
+		width: 90%;
+		margin-bottom: 50px;
+	}
+
+}
+
+@media screen and (max-width: 735px) {
+
+	#lightgallery_1 > a > .portrait {
+		height: 345.5px;
+		width: 220.3px;
+	}
+
+	#lightgallery_1 > a > .landscape {
+		height: 150px;
+		width: 220.3px;
+	}
+
+}
+
+@media screen and (max-width: 490px) {
+
+	#lightgallery_1 > a > .portrait {
+		height: 240px;
+		width: 164px;
+	}
+
+	#lightgallery_1 > a > .landscape {
+		height: 110px;
+		width: 164px;
+	}
+
+	#lightgallery_2 > a > img {
+		height: 240px;
+		width: 164px;
+	}
+
+}
+
+@media screen and (max-width: 365px) {
+
+	.gallery {
+		margin-bottom: 100px;
+	}
+
+	#lightgallery_1 > a > .portrait {
+		height: 210px;
+		width: 140px;
+	}
+
+	#lightgallery_1 > a > .landscape {
+		height: 200px;
+		width: 280px;
+	}
+
+	#lightgallery_2 > a > img {
+		height: 210px;
+		width: 140px;
+	}
+
+}
